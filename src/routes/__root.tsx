@@ -7,6 +7,7 @@ import {
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 
 import Header from '../components/Header'
+import { Navbar } from '../components/navbar'
 
 import TanstackQueryLayout from '../integrations/tanstack-query/layout'
 
@@ -25,7 +26,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Yowzer',
       },
     ],
     links: [
@@ -33,12 +34,17 @@ export const Route = createRootRoute({
         rel: 'stylesheet',
         href: appCss,
       },
+      {
+        rel: 'icon',
+        href: '../../public/favicon.ico'
+      }
     ],
   }),
 
   component: () => (
     <RootDocument>
       <TanstackQueryProvider>
+        <Navbar />
         <Header />
 
         <Outlet />
