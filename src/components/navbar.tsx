@@ -21,10 +21,10 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
+    <header className="sticky flex top-0 z-50 w-full border-b bg-white justify-center">
       <div className="container flex h-16 items-center">
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-          <SheetTrigger asChild>
+          <SheetTrigger asC hild>
             <Button variant="outline" size="icon" className="mr-2 md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
